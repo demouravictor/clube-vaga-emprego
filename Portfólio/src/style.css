@@ -1,0 +1,1071 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+/* font-family: "JetBrains Mono", monospace; */
+@import url('https://fonts.googleapis.com/css2?family=Anta&display=swap')
+/*   font-family: "Anta", sans-serif; */
+;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: "JetBrains Mono", monospace;
+
+}
+
+html {
+    font-size: 60%;
+    overflow-x: hidden;
+}
+
+:root {
+    --cor-tema: #080808;
+    --cor-secundaria: #131313;
+    --cor-de-texto: #ffffff;
+    --cor-principal: #00ffee;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 4rem 5% 4rem;
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 5;
+
+}
+
+.logo {
+    font-size: 3rem;
+    color: var(--cor-de-texto);
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.3 ease;
+    text-shadow: 0 0 25px var(--cor-principal)
+}
+
+.logo:hover {
+    transform: scale(1.1);
+    transition: 1s;
+}
+
+.navbar {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    padding-right: 12%;
+}
+
+.navbar a {
+    font-size: 1.8rem;
+    color: var(--cor-de-texto);
+    margin: 0 2%;
+    font-weight: 500;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+
+.navbar a:hover,
+
+.navbar a.active {
+    color: var(--cor-principal);
+    border-bottom: 3px solid var(--cor-principal);
+}
+
+body {
+    background-color: var(--cor-tema);
+    color: var(--cor-de-texto);
+}
+
+#menu-icon {
+    font-size: 3.6rem;
+    color: var(--cor-principal);
+    display: none;
+}
+
+
+
+
+
+#home {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+.home-esquerda {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10%;
+    width: 65%;
+    height: 40%;
+}
+
+.home-esquerda-titulo {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 4.95rem;
+    font-weight: bolder;
+    text-align: left;
+    margin: 1.5% 0;
+    text-transform: uppercase;
+    background: linear-gradient(to right, #01554f, #00ffee, #01554f);
+    background-size: 400% 100%;
+    animation: destaque 4s ease-in-out infinite alternate;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.home-esquerda-subtitulo {
+    text-align: left;
+    padding-right: 50%;
+    font-size: 2.5rem;
+    color: var(--cor-principal);
+    text-shadow: 0 0 25px var(--cor-de-texto)
+}
+
+@keyframes destaque {
+    0% {
+        background-position-x: 0%;
+    }
+
+    100% {
+        background-position-x: 400%;
+    }
+
+}
+
+.home-esquerda-paragrafo {
+    font-size: 2rem;
+    color: var(--cor-de-texto);
+    margin: 3% 0;
+}
+
+.home-contatos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5%;
+    width: 100%;
+    height: 20%;
+}
+
+
+
+.icone {
+    border-radius: 100%;
+    font-size: 4rem;
+    color: var(--cor-de-texto);
+    text-shadow: 0 0 30px var(--cor-de-texto);
+    padding: 20%;
+}
+
+.icone:hover {
+    transition: 0.5s;
+    border-radius: 15px;
+    border: 2px solid var(--cor-principal);
+    font-size: 4rem;
+    color: var(--cor-principal);
+    text-shadow: 0 0 60px var(--cor-de-texto);
+    padding: 20%;
+}
+
+.home-direita-foto {
+    border-radius: 100%;
+    box-shadow: 0 0 50px var(--cor-principal);
+    transition: 0.4 ease-in-out;
+}
+
+
+
+
+/*---------------------- SOBRE MIM ----------------------*/
+
+
+#sobre {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+}
+
+
+.sobre-mim-titulo {
+    width: 9%;
+    font-size: 3rem;
+    padding: 0.5% 0;
+    border-bottom: 3px solid #00ffee;
+    margin-left: 10%;
+    color: var(--cor-de-texto);
+    text-shadow: 0 0 30px var(--cor-principal);
+    text-transform: uppercase;
+}
+
+.sobre-mim-p {
+    padding: 2%;
+    margin: 5%;
+    width: 80%;
+    height: 50%;
+    border-radius: 10px;
+    border: 3px solid var(--cor-secundaria);
+}
+
+.sobre-mim-paragrafo {
+    margin: 4% 5%;
+    font-size: 2rem;
+}
+
+.sobre-mim-strong{
+    color: var(--cor-principal);
+}
+
+/*---------------------- EDICAO ----------------------*/
+
+
+
+#edicao {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+
+    background-color: var(--cor-de-texto);
+    color: var(--cor-secundaria);
+}
+
+.edicao-titulo{
+    margin-top: 3.5%;
+    padding-bottom: 0.75%;
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+    align-items: center;
+    font-size: 3rem;
+    font-weight: bolder;
+    text-transform: uppercase;
+    border-bottom: 5px solid var(--cor-secundaria);
+}
+
+
+.edicao-grid{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    width: 100vw;
+
+}
+
+
+.edicao-esquerda{
+    display: flex;
+    flex-direction: column;
+
+    font-weight: bold;
+    font-size: 2rem;
+    
+    padding-top: 25%;
+    padding-left: 10%;
+}
+
+
+.edicao-esquerda-lista{
+    display: flex;
+    flex-direction: column;
+
+    margin-top: 5vh;
+    margin-left: 2vw;
+
+    gap: 2.5vh;
+}
+
+
+.edicao-paragrafo{
+    font-size: 1.5rem;
+    margin-top: 10vh;
+}
+
+
+
+.edicao-titulo-esquerda::before{
+    content: "Nas FOTOS A DIREITA foram usadas as seguintes FERRAMENTAS:";
+}
+
+
+
+.container-slider {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+  
+  .container-images {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 17.5vw;
+    height: 10vh;
+    margin-bottom: 12.5vh;
+  }
+  
+  .slider {
+    opacity: 0;
+    transition: opacity .2s;
+    position: absolute;
+    width: 100%;
+    border-radius: 10px;
+  }
+  
+  .on {
+    opacity: 1;
+  }
+  
+  #prev-button, #next-button {
+    width: 30px;
+    height: 30px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    margin-bottom: 12.5vh;
+  }
+  
+  #prev-button img, #next-button img {
+    width: 100%;
+    height: 100%;
+  }
+  
+  #prev-button {
+    transform: rotate(180deg);
+  }
+
+
+
+
+
+/*---------------------- PROJETO ----------------------*/
+
+
+#projetos {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+
+    background-color: var(--cor-tema);
+    color: var(--cor-de-texto);
+}
+
+
+.projeto-titulo{
+    margin-top: 3.5%;
+    padding-bottom: 0.75%;
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+    align-items: center;
+    font-size: 3rem;
+    font-weight: bolder;
+    text-transform: uppercase;
+    border-bottom: 5px solid var(--cor-de-texto );
+}
+
+
+.projeto-esquerda-titulo::before    {
+    content: "Para a criação do VÍDEO A DIREITA foram usados as seguintes FERRAMENTAS:";
+}
+
+.projetos-video{
+    border-radius: 15px;
+}
+
+.projetos-esquerda{
+    display: flex;
+    flex-direction: column;
+
+    font-weight: bold;
+    font-size: 2rem;
+    
+    padding-top: 25%;
+    padding-left: 10%;
+}
+
+
+.projetos-direita{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 25%;
+}
+
+
+
+
+
+
+
+/*---------------------- HABILIDADES ----------------------*/
+
+#habilidades {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    height: 100vh;
+
+    align-items: center;
+
+    background-color: var(--cor-de-texto);
+    color: var(--cor-secundaria);
+
+}
+
+.habilidades-titulo {
+    font-size: 2rem;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.habilidades-grid{
+    display: grid;
+    grid-template-columns: 33.3% 33.3% 33.3%;
+    width: 100vw;
+}
+
+.habilidades-grid-container{
+    display: flex;
+    flex-direction: column;
+
+    font-weight: bold;
+    font-size: 2rem;
+    
+    padding: 10vh 2.5vw 2.5vh 2.5vw;
+
+    height: 75vh;
+
+
+}
+
+
+
+.habilidades-titulo{
+    text-align: center;
+    margin-bottom: 10vh;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.skills-bar .bar{
+    margin: 20px 0;
+}
+
+.skills-bar .bar:first-child{
+    margin-top: 0px;
+}
+
+.skills-bar .bar .info{
+    margin-bottom: 5px;
+}
+.skills-bar .bar .info span{
+   font-size: 16px; 
+   font-weight: 500;
+}
+
+.skills-bar .bar .progress-line{
+    position: relative;
+    height: 10px;
+    width: 100%;
+    background: #f0f0f0;
+    transform-origin: left;
+    box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.05),
+    0px 1px  rgba(255, 255, 255, 0.8);
+
+
+    animation: animate 1s cubic-bezier(0.47, 0, 0.745, 0.715) forwards;
+}
+
+@keyframes animate{
+    100%{
+        transform: scaleX(1);  
+    }
+}
+
+.progress-line span{
+    height: 100%;
+    width: 80%;
+    background: var(--cor-principal);
+    position: absolute;
+    border-radius: 10px;
+    transform-origin: left;
+    transform: scaleX(0);
+    animation: animate 1s 1s cubic-bezier(0.47, 0, 0.745, 0.715) forwards;
+}
+
+.progress-line.html span{
+    width:  85%;
+}
+
+.progress-line.css span{
+    width: 90%;
+}
+
+
+.progress-line.js span{
+    width: 55%;
+}
+
+.progress-line.angular span{
+    width: 70%;
+}
+
+.progress-line.nestjs span{
+    width: 35%;
+}
+
+.progress-line.mysql span{
+    width: 25%;
+}
+
+
+
+.progress-line.canva span{
+    width: 90%;
+    background: #b700ff;
+}
+
+.progress-line.photoshop span{
+    width: 65%;
+    background: #b700ff;
+}
+
+.progress-line.ilustrator span{
+    width: 40%;
+    background: #b700ff;
+}
+
+.progress-line.lightroom span{
+    width: 85%;
+    background: #b700ff;
+}
+
+
+
+
+.progress-line.criatividade span{
+    width: 100%;
+    background: #10e98f;
+}
+
+
+.progress-line.lideranca span{
+    width: 80%;
+    background: #10e98f;
+}
+
+
+.progress-line.marketing span{
+    width: 65%;
+    background: #10e98f;
+}
+
+
+.progress-line.coletivo span{
+    width: 80%;
+    background: #10e98f;
+}
+
+
+.progress-line.ingles span{
+    width: 90%;
+    background: #10e98f;
+}
+
+
+
+
+.progress-line span::before{
+    position: absolute;
+    content:  "";
+    right: 0;
+    top: -10px;
+    height: 0;
+    width: 0;
+    border: 7px solid transparent;
+    border-bottom-width: 0;
+    border-right-width: 0px;
+    border-top-color: #000;
+
+
+    opacity: 0;
+    animation: showText2 0.5s 1.5s linear forwards;
+}
+
+.bar .progress-line span::after{
+    position: absolute;
+    
+    right: 0;
+    top: -28px;
+    background: #000;
+    color: #fff;
+    font-weight: 500;
+    font-size: 16px;
+    padding: 1px 8px;
+    border-radius: 4px;
+
+    opacity: 0;
+    animation: showText2 0.5s 1.5s linear forwards;
+ 
+   
+}
+
+@keyframes showText2{
+   100%{
+       opacity: 1;
+   } 
+}
+
+.progress-line.html span::after{
+    content:  "85%";
+}
+
+.progress-line.css span::after{
+    content:  "90%";
+}
+
+
+.progress-line.js span::after{
+    content:  "55%";
+}
+
+.progress-line.angular span::after{
+    content:  "70%";
+}
+
+.progress-line.nestjs span::after{
+    content:  "25%";
+}
+
+.progress-line.mysql span::after{
+    content:  "20%";
+}
+
+
+
+.progress-line.canva span::after{
+    content:  "90%";
+}
+
+.progress-line.photoshop span::after{
+    content:  "65%";
+}
+
+.progress-line.ilustrator span::after{
+    content:  "30%";
+}
+
+.progress-line.lightroom span::after{
+    content:  "80%";
+}
+
+
+
+
+
+
+.progress-line.criatividade span::after{
+    content:  "100%";
+}
+
+
+.progress-line.lideranca span::after{
+    content:  "80%";
+}
+
+
+.progress-line.marketing span::after{
+    content:  "65%";
+}
+
+
+
+.progress-line.coletivo span::after{
+    content:  "80%";
+}
+
+
+.progress-line.ingles span::after{
+    content:  "90%";
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*---------------------- INFORMAÇÃO ----------------------*/
+
+
+
+
+#informacao {
+    display: grid;
+    grid-template-columns: 65% 35%;
+    width: 100%;
+    height: 75vh;
+}
+
+
+.informacao-esquerda {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10%;
+    margin: 5% 0 0 0;
+
+
+}
+
+.informacao-esquerda-cont {
+    height: 40vh;
+    padding: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--cor-secundaria);
+}
+
+.informacao-esquerda-titulo {
+    font-size: 3rem;
+    text-transform: uppercase;
+    border-bottom: 3px solid #00ffee;
+}
+
+.informacao-esquerda-info {
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+.informacao-icones {
+    margin-top: 5%;
+    display: flex;
+    width: 100%;
+    height: 50%;
+    align-items: center;
+    justify-content: center;
+    font-size: 5rem;
+    gap: 10%;
+    color: var(--cor-de-texto);
+}
+
+.icone-contato {
+    color: var(--cor-de-texto);
+}
+
+.icone-contato:hover {
+    box-shadow: 0 0 12px var(--cor-principal);
+}
+
+
+
+.informacao-direita {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+
+}
+
+.informacao-direita-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--cor-secundaria);
+    width: 65%;
+    height: 80%;
+    gap: 10%;
+}
+
+.informacao-direita-titulo {
+    font-size: 3rem;
+    text-transform: uppercase;
+    border-bottom: 3px solid var(--cor-principal);
+    color: var(--cor-de-texto);
+    margin-bottom: 7%;
+}
+
+.imagem-qr {
+    width: 50%;
+    box-shadow: 0 0 30px var(--cor-principal);
+}
+
+.git-qr{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+
+@media screen and (max-width:720px) {
+
+    /*---------- CABECALHO  ------------*/
+    header {
+        display: none;
+    }
+
+    main {
+        margin: 0;
+    }
+    /*---------- HOME  ------------*/
+    #home {
+        display: flex;
+        flex-direction: column-reverse;
+        width: 100%;
+        gap: 15%;
+    }
+
+    .home-esquerda {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        margin: 0;
+        gap: 5%;
+    }
+
+    .home-esquerda-titulo {
+        margin-top: 5%;
+        margin-bottom: 10%;
+        font-size: 2.8rem;
+        text-align: center;
+    }
+
+
+    .home-esquerda-subtitulo {
+        font-size: 0;
+
+    }
+
+    .home-esquerda-paragrafo {
+        font-size: 1.5rem;
+        height: 100%;
+        padding: 0;
+    }
+
+    .home-direita {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .home-direita-foto {
+        width: 50%;
+    }
+
+    
+    .home-contatos{
+        display: none;
+    }
+
+
+
+    /*---------- SOBRE  ------------*/
+
+
+    #sobre{
+        margin-top: 10%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .sobre-mim-titulo{
+        font-size: 2rem;
+        width: 30%;
+    }
+
+    .sobre-mim-paragrafo{
+        font-size: 1.5rem;
+    }
+
+
+        /*---------- EDIÇÃO  ------------*/
+
+
+    #edicao{
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    .edicao-grid{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .edicao-esquerda{
+        padding: 5%;
+        margin-top: 5vh;
+        
+        font-size: 1.5rem;
+    }
+
+    .edicao-titulo-esquerda::before{
+        content: "Nas FOTOS ABAIXO foram utilizadas as seguintes FERRAMENTA:";
+    }
+
+    .edicao-esquerda-lista{
+        margin-top: 5vh ;
+        margin-left: 5vw;
+    }
+
+
+    .edicao-paragrafo{
+        display: none;
+    }
+
+
+    .container-slider{
+        display: flex;
+        min-height: 50vh;
+        margin-top: 2.5vh;
+    }
+
+    #next-button{
+        margin: 0;
+    }
+
+    #prev-button{
+        margin: 0;
+    }
+
+    .container-images{
+        width: 50%;
+        margin-bottom: 0;
+    }
+
+    /*---------- PROJETOS  ------------*/
+
+    #projetos{
+        margin-top: 10vh;
+    }
+
+
+    .projetos-esquerda{
+        padding: 0;
+        margin-top: 10vh;
+        margin-left: 2vw;
+
+        font-size: 1.5rem;
+    }
+
+    .projeto-esquerda-titulo::before    {
+
+        content: "No VÍDEO ABAIXO foram utilizadas as seguintes FERRAMENTAS:";
+    }
+
+
+    .projetos-video{
+        width: 75vw;
+    }
+
+
+
+
+    /*---------- HABILIDADES  ------------*/
+
+
+    #habilidades{
+        padding-top: 5vh;
+        height: 250vh;
+    }
+
+
+    .habilidades-grid{
+        margin-top: 10vh;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .habilidades-titulo{
+        margin-bottom: 5vh;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+        /*---------- INFORMAÇÃO  ------------*/
+
+
+    #informacao{
+        margin-top: 10vh;
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    .informacao-direita{
+        display: none;
+    }
+
+
+
+
+    
+}
